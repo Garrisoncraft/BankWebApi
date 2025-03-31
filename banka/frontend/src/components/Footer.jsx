@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Avatar, Typography, Box, Container, Grid, Button, TextField } from '@mui/material';
-import Logo from '../assets/Logo.jpeg'
+import Logo from '../assets/Logo.png'
 import { HashLink } from 'react-router-hash-link';
 
 

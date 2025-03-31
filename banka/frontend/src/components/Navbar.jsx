@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { AuthContext } from '../context/AuthContext';
-import logo from '../assets/Logo.jpeg';
+import logo from '../assets/Logo.png';
 
 const Navbar = () => {
   const { user, loading, logout } = useContext(AuthContext);
