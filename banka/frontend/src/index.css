@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.formContainer {
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 600px) {
+    .formContainer {
+      padding: 1rem;
+    }
+  }

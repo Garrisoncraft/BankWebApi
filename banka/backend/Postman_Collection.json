@@ -1,0 +1,245 @@
+{
+  "info": {
+    "name": "Banka API",
+    "description": "Postman collection for Banka API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/signup",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "signup"]
+            }
+          }
+        },
+        {
+          "name": "Signin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/signin",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "signin"]
+            }
+          }
+        },
+        {
+          "name": "Reset Password Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/reset-password",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "reset-password"]
+            }
+          }
+        },
+        {
+          "name": "Reset Password Confirmation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"newPassword\": \"newpassword123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/reset-password/:token",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "reset-password", ":token"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Accounts",
+      "item": [
+        {
+          "name": "Create Account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"savings\",\n  \"balance\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/accounts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "accounts"]
+            }
+          }
+        },
+        {
+          "name": "Update Account Status",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"active\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/accounts/:accountNumber",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "accounts", ":accountNumber"]
+            }
+          }
+        },
+        {
+          "name": "Delete Account",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/accounts/:accountNumber",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "accounts", ":accountNumber"]
+            }
+          }
+        },
+        {
+          "name": "Get All Accounts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/accounts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "accounts"]
+            }
+          }
+        },
+        {
+          "name": "Get Specific Account",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/accounts/:accountNumber",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "accounts", ":accountNumber"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Debit Account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 100\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transactions/:accountNumber/debit",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transactions", ":accountNumber", "debit"]
+            }
+          }
+        },
+        {
+          "name": "Credit Account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 100\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transactions/:accountNumber/credit",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transactions", ":accountNumber", "credit"]
+            }
+          }
+        },
+        {
+          "name": "Get Transaction History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transactions/:accountNumber/transactions",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transactions", ":accountNumber", "transactions"]
+            }
+          }
+        },
+        {
+          "name": "Get Specific Transaction",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transactions/transactions/:transactionId",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transactions", "transactions", ":transactionId"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create Staff/Admin User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"staff@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "users"]
+            }
+          }
+        },
+        {
+          "name": "Get User Accounts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/:email/accounts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "users", ":email", "accounts"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
