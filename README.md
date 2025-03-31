@@ -144,7 +144,7 @@ BankApp/
 
 *   **GitHub:** Push your code to a GitHub repository for version control and collaboration.
     ```bash
-    git remote add origin <your_github_repository_url>
+    git remote add origin https://github.com/Garrisoncraft/Bank-web-app.git
     git branch -M main
     git push -u origin main
     ```
