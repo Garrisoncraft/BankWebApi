@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Typography, Box, Container, Grid, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { CheckCircle } from 'lucide-react'; 
@@ -124,12 +125,11 @@ const SupportSection = () => {
                             </Typography>
                         </FeatureItem>
 
-                        <StyledButton variant="outlined">Contact</StyledButton>
-                        <StyledButton variant="text" sx={{paddingLeft: 0, color: '#6366f1'}}>Help →</StyledButton>
+                        <StyledButton component={Link} to= "/contact" variant="outlined">Contact</StyledButton>
+                        <StyledButton component={Link} to= "/contact" variant="text" sx={{paddingLeft: 0, color: '#6366f1'}}>Help →</StyledButton>
                     </Box>
                 </Grid>
 
-                {/* Image (Right on larger screens) */}
                 <Grid item xs={12} md={6}>
                     <ImageContainer>
                         <img src= {Support} alt="24/7 Support" style={{ width: '100%', height: '100%', display: 'block', filter: 'brightness(0.8)'}} />

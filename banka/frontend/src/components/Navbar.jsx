@@ -1,18 +1,8 @@
 import React, { useContext, useState } from 'react';
-import {
-  Box,
-  Avatar,
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-  Menu,
-  MenuItem,
+import { Box, Avatar, AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import { AuthContext } from '../context/AuthContext';
 import logo from '../assets/Logo.png';
 
@@ -72,8 +62,8 @@ const Navbar = () => {
           <Button
             color="inherit"
             sx={{ '&:hover': { bgcolor: 'black', color: 'white' }, fontSize: { xs: '0.5rem', sm: '1rem' } }}
-            component={HashLink}
-            to="#contact-form"
+            component={Link}
+            to="/contact"
           >
             Contact
           </Button>
@@ -192,7 +182,7 @@ const Navbar = () => {
             <MenuItem onClick={handleClose} component={Link} to="/about">
               About
             </MenuItem>
-            <MenuItem onClick={handleClose} component={HashLink} to="#contact-form">
+            <MenuItem onClick={handleClose} component={Link} to="/contact">
               Contact
             </MenuItem>
             {!user ? (

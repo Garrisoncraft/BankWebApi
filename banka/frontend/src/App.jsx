@@ -14,6 +14,7 @@ import NewPassword from './components/auth/NewPassword';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
+import ContactForm from './components/common/ContactForm';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/staff" element={<StaffDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Navigate to="/" />} />
