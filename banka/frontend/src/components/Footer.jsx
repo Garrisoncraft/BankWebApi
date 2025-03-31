@@ -85,12 +85,12 @@ const Footer = () => {
                             Legal
                         </Typography>
                         <Box>
-                            <Typography variant="body2" sx={{ color: '#4b5563', mb: 1,  textDecoration: 'none' }} component={Link} to="/privacy-policy">
+                            <Typography variant="body2" sx={{ color: '#4b5563', mb: 1,  textDecoration: 'none' }} component={Link} to="/">
                                 Privacy Policy
                             </Typography>
                             </Box>
                             <Box>
-                            <Typography variant="body2" sx={{ color: '#4b5563', mb: 1,  textDecoration: 'none' }} component={Link} to="/terms-of-use">
+                            <Typography variant="body2" sx={{ color: '#4b5563', mb: 1,  textDecoration: 'none' }} component={Link} to="/">
                                 Terms of Use
                             </Typography>
                         </Box>
