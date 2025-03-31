@@ -15,8 +15,21 @@ dotenv.config();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:5173', // Local development frontend
+  'https://bankwebapp-fullstack.onrender.com' // Deployed frontend
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from the frontend
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   credentials: true // Allow credentials to be sent
 })); // Enable CORS
 
