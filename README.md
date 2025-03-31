@@ -1,5 +1,4 @@
-# BankApp
-
+# Bank-Web-App-fullstack
 ## Overview
 
 BankApp is a full-stack web application that provides banking functionalities, including user authentication, account management, and transaction processing. It offers a secure and efficient platform for users to manage their finances. The application features role-based access control, ensuring that different user roles (admin, staff, client) have appropriate permissions.
