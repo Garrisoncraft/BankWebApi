@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Typography, Button, Paper } from '@mui/material';
+import { Link } from 'react-router-dom'; 
 import BackgroundImage from '../assets/Hero Background.jpg';
 import { AuthContext } from '../context/AuthContext';
 
@@ -54,10 +55,10 @@ const Hero = () => {
         <br />
         {!user ? (
           <>
-            <Button variant="contained" color="primary" sx={{ mr: 10 }} href="/signup">
+            <Button variant="contained" color="primary" sx={{ mr: 10 }} component={Link} to="/signup">
               Sign Up
             </Button>
-            <Button variant="outlined" sx={{ color: 'white', fontWeight: 'bold', borderWidth: 2 }} href="/login">
+            <Button variant="outlined" sx={{ color: 'white', fontWeight: 'bold', borderWidth: 2 }} component={Link} to="/login">
               Login
             </Button>
           </>
