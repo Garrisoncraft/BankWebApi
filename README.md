@@ -87,7 +87,7 @@ BankApp/
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url> # Replace <repository_url> with the actual URL
+    git clone https://github.com/Garrisoncraft/Bank-Web-App-fullstack.git
     cd BankApp
     ```
 2.  **Backend Setup:**
@@ -143,7 +143,7 @@ BankApp/
 
 *   **GitHub:** Push your code to a GitHub repository for version control and collaboration.
     ```bash
-    git remote add origin https://github.com/Garrisoncraft/Bank-web-app.git
+    git remote add origin https://github.com/Garrisoncraft/Bank-Web-App-fullstack.git
     git branch -M main
     git push -u origin main
     ```
